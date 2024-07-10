@@ -14,4 +14,6 @@ date: 2024-07-08
 last_modified_at: 2024-07-08
 ---
 
-# 1. Github에 생성
+# 1. Github Blog용 Repository 생성.
+
+# 2. 
