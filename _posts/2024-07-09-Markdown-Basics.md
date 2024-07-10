@@ -301,3 +301,17 @@ I get 10 times more traffic from [Google][1] than from
 | 신라면 | 1500 | 1
 | 삼양라면 | 6000 | 5
 | 너구리 | 20000 | 30
+
+<br>
+
+# 9. 이모지
+마지막은 **Emoji**입니다.
+원하는 이모지명을 `:` (colon) 사이에 넣어주시면 됩니다.
+
+**\<예제\>** 
+```
+:backhand_index_pointing_up: => 👆
+```
+
+[![Emoji](https://github.com/loplio/loplio.github.io/assets/51193110/89891cc0-a31c-4666-8e73-7202e6dd7233)](https://www.webfx.com/tools/emoji-cheat-sheet/)
+👆<cite>Link</cite>👆
