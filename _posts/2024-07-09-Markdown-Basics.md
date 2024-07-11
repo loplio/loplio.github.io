@@ -17,7 +17,7 @@ last_modified_at: 2024-07-10
 # 1. Markdown 기본 문법
 ## 단순 문법 요약  
 
-|문법|사용법|
+|문법|사용법| 
 |:-|:-|
 |**줄바꿈**| **(Space Bar x 2 이후 Enter)**  or **(\<br>)**  
 |**특수 문자 출력**| 특수문자 앞에 &nbsp; **\\** 를 붙임 or **백틱(``)**를 이용하여 문자열을 감싸면 그대로 출력  
@@ -50,7 +50,7 @@ example text
 ## 참고자료
 마크 다운의 창시자 존 그루버 마크 다운 설명 문서와 식빵맘 포스팅 글을 위주로 참고하였습니다.  
 [마크다운 문서](https://daringfireball.net/projects/markdown)  
-[공부하는 식빵맘(마크다운)](https://ansohxxn.github.io/blog/markdown/)
+[식빵맘's Blog(마크다운)](https://ansohxxn.github.io/blog/markdown/)
 
 <br>
 
@@ -240,7 +240,7 @@ I get 10 times more traffic from [Google][1] than from
 **링크와 유사**한 구조이며 **\!**를 붙여 링크와 구분합니다.  
 
 **참고자료**  
-[공부하는 식빵맘(이미지 삽입)](https://ansohxxn.github.io/blog/insert-image/)  
+[식빵맘's Blog(이미지 삽입)](https://ansohxxn.github.io/blog/insert-image/)  
 
 ## 인라인 이미지\!\[name\]\(path\)
 **첫 번째 방법**, **이미지 제목\[name\]**과 **이미지 주소\(path\)**를 연결.
@@ -306,7 +306,8 @@ I get 10 times more traffic from [Google][1] than from
 
 # 9. 이모지
 마지막은 **Emoji**입니다.
-원하는 이모지명을 `:` (colon) 사이에 넣어주시면 됩니다.
+원하는 이모지명을 `:` (colon) 사이에 넣어주시면 됩니다.  
+원하는 이모지는 아래 링크에서 확인해보세요!  
 
 **\<예제\>** 
 ```
