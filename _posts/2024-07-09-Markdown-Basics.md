@@ -145,7 +145,7 @@ int main()
 **\<span style="color:..."> 색상을 변경할 텍스트... \</span>**
 
 **\<예시\>**  
-**\<span style="color:blue"> 파란색.\</span>** => **<span style="color:blue"> 파란색.</span>**
+**\<span style="color:yellow"> 노란색.\</span>** => **<span style="color:yellow"> 노란색.</span>**
 
 ## 5. 텍스트 문법 예시
 
@@ -274,7 +274,7 @@ I get 10 times more traffic from [Google][1] than from
 <br>
 
 # 테이블
-테이블 문법은 **`|`(테이블 분리)**과 **`:-`(왼쪽 정렬)**, **`-:`(오른쪽 정렬)**을 합쳐 만들 수 있다.  
+테이블 문법은 **`|`(테이블 분리)**과 **`:-`(왼쪽 정렬)**, **`-:`(오른쪽 정렬)**을 합쳐 만들 수 있습니다.
 
 **\<예제\>** 
 ```

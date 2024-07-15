@@ -7,6 +7,19 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+
+    <!--Nanum Gothic Coding-->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap">
+
+    <!--Diphylleia/Noto Serif Korean-->
+    <link rel="preload" as="style" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Serif+KR:wght@200..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Serif+KR:wght@200..900&display=swap">
+   
+    <!--Gowun Batang-->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">

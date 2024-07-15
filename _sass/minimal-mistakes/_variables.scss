@@ -12,9 +12,10 @@ $doc-font-size: 16 !default;
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
+// Nanum Gothic Coding/Diphylleia/Noto Serif Korean/Gowun Batang
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$serif: "Nanum Gothic Coding", Georgia, Times, serif !default;
+$sans-serif: "Gowun Batang", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 

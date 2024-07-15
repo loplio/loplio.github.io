@@ -47,7 +47,7 @@ last_modified_at: 2024-07-11
 #### <span style="font-size: medium;">***navigation.yml📜***</span>
 -  블로그 <u>사이드 바</u> or <u>메뉴 바</u> **꾸밀** 수 있습니다.  
 -  <u>main</u>은 **상단 메뉴 바**이며, 기본 형식이 적혀 있습니다.
--  docs는 제가 추가한 부분이고, 사이드 바를 넣기 위해 추가헀습니다.
+-  docs는 제가 추가한 부분이고, 사이드 바를 넣기 위해 추가했습니다.
 
 ```yml
 # main links
