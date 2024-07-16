@@ -8,6 +8,8 @@ tags:
   - [Blog, Visual Studio Code, Markdown]
 
 toc: true
+toc_label: "List"
+toc_icon: "bars"
 toc_sticky: true
  
 date: 2024-07-09
