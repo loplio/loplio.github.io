@@ -5,7 +5,7 @@ excerpt: ""
 categories:
   - Blog
 tags:
-  - [Blog, Visual Studio Code, jekyll, Github, Git]
+  - [Blog, jekyll, Github, Git]
 
 toc: true
 toc_label: "List"
@@ -38,7 +38,7 @@ last_modified_at: 2024-07-08
 [![ruby-installer](https://github.com/user-attachments/assets/fc9c4c98-5a41-4695-a126-c723eafaf8c0)](https://rubyinstaller.org/downloads/)  
 👆<cite>Link</cite>👆
 
-2. - [X] `MSYS2 development toolchain` 체크해주세요.
+2. - [X] `MSYS2 development toolchain` 체크해주세요.  
 ![ruby-install1](https://github.com/user-attachments/assets/a74f654c-11bc-418d-8239-04567bcfa87b){: width="50%" height="50%"}![ruby-install2](https://github.com/user-attachments/assets/5ddbbcd8-91b3-4f40-ac1b-a2993de48d7c){: width="50%" height="50%"}  
 
 3. Enter눌러서 1, 3번 둘다 깔아주시면 됩니다.  

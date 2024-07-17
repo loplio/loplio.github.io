@@ -17,7 +17,7 @@ last_modified_at: 2024-07-12
 
 <br>
 
-# <span style="color:rgb(0, 220, 220)">Liquid 기본 문법</span>
+# <span style="color:rgb(0, 180, 180)">Liquid 기본 문법</span>
 <span style="font-size: large">블로그를 직접 커스텀하려면 Html, Liquid 문법의 기본은 알아야 편합니다.  
 저는 웹 개발자가 아니지만, 간단한 문법만 살펴보려 합니다.</span>
 
