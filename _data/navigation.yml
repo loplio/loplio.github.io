@@ -16,3 +16,5 @@ docs:
     children:
       - title: "Blog"
         url: /categories/blog
+      - title: "Dev Env Trends"
+        url: /categories/env_trends

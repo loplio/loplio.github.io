@@ -30,6 +30,60 @@ last_modified_at: 2024-07-12
 잘 정리 된 문서라 <u>자세히</u> 알고 싶거나, <u>직관적인 출력 값</u>을 보려면 참고하세요!  
 📌 [ Liquid 문서 ](https://shopify.dev/docs/api/liquid/) 📌
 
+전역 변수 관련 문서  
+📌 [ Jekyll variables ](https://jekyllrb.com/docs/variables/) 📌
+
+<br>
+
+# 전역 변수
+
+|전역 변수| 설명
+|-:|-:
+|`site`| 사이트의 전반적 정보와 구성 설정(config.yml)의 변수 접근.
+|`page`| `---`로 감싸진 서문(Front Matter)에 정의된 메타 데이터 접근.
+|`layout`| `---`로 감싸진 서문(Front Matter)에 정의된 레이아웃 접근.
+|`etc.`| `theme, content, paginator`도 있으니 해석이 필요하시면 참고서를 보세요.
+
+## site 변수
+자주 보이는 site의 대표적인 **기본 제공 변수**들 다음과 같습니다!  
+- `site.posts`: 모든 블로그 포스트들
+- `site.pages`: 모든 페이지들
+- `site.categories`: 카테고리별 포스트 목록
+- `site.tags`: 태그별 포스트 목록
+- `site.data`: _data 폴더 내의 모든 데이터 파일
+- `site.time`: 현재 시간
+- `site.pages`: 모든 페이지들
+- `site.config`: _config.yml 파일의 모든 설정
+
+```liquid
+{% raw %}## 모든 포스트의 경로와 타이틀 출력 ##{% endraw %}
+<ul>
+  { % for post in site.posts % }
+    <li>
+      <a href="{ { post.url } }">{ { post.title } }</a>
+    </li>
+  { % endfor % }
+</ul>
+```
+
+## page/layout 변수
+이는 주로 YAML헤더인 서문(Front matter)이 있을 때  사용하며,  
+YAML헤더가 사용될 수 있는 `.md`, `.html`, `.yml`, `.json`파일에 사용됩니다.  
+<u>page</u>는 **메타 데이터 참조**를 하며, <u>layout</u>은 **레이아웃 설정**을 관여합니다.
+
+```markdown
+---
+layout: post
+title: "My Blog First Post"
+date: 2024-07-12
+---
+
+{ % if page.title == "Surprise Page" % }
+  { % layout Surprise % }
+{ % endif % }
+```
+`{ % layout Surprise % }`은 Surprise파일을 기존 layout에 적용하겠다는 말입니다.
+
 <br>
 
 # Basic
@@ -130,8 +184,8 @@ tablerow는 html에 <table></table>을 이용하여 배열의 행과 열을 html
 
 ## 3. 템플릿
 ### Render/Include
-***Render***는 <u>스니펫(snippet)</u>이나 <u>앱 블록(app block)</u>을 **출력**하는 역활을 합니다.  
-***Include***도 **출력**이지만, 효율이 떨어져 ***Render***로 대체됐습니다.  
+***Include***는 <u>스니펫(snippet)</u>이나 <u>앱 블록(app block)</u>을 **삽입**하는 역활을 합니다.   
+***Render***는 include의 **역활 대체**할 수 있으며, Jekyll 4.0버전 이상에서 사용하는 권장 방식입니다.  
 ***But***, <u>Minimal-Mistakes파일</u>는 **Include를 사용**하고 있으니 기억해주세요.
 <div class="notice" style="padding: 0.5em; text-align: center; font-weight: bold;">
   <span style="font-size: small;">🌠 Snippet은 작은 조각이란 뜻이고, 재사용 가능한 소스 코드, 기계어, 텍스트의 작은 부분을 뜻합니다.</span>
@@ -141,6 +195,9 @@ tablerow는 html에 <table></table>을 이용하여 배열의 행과 열을 html
 
 {% include 'filename' %}{% endraw %}
 ```
+<div class="notice" style="padding: 0.5em; text-align: center; font-weight: bold;">
+  <span style="font-size: small;">🌠 render/include의 파일명을 적을 때, 확장자(.html)는 생략됩니다. .html, .liquid으로 확장자를 명시할 수 있습니다.</span>
+</div>
 
 ### Other
 그 외에도 다양한 템플릿들이 있습니다. 관심이 있다면 찾아보세요!
@@ -273,11 +330,7 @@ POTION{%endraw%}
   <span style="font-size: medium;">✨개인 공부 글입니다! 언제든지 질문/지적 해주세요!✨</span>
 </div>
 
-
-<script src="https://utteranc.es/client.js"
-        repo="loplio/loplio.github.io"
-        issue-term="pathname"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
+<!-- html에 yaml의 헤더인 front matter이 있을 때, 주의해야 할 점은 yaml헤더에는 기본 제공되는 전역 변수들과 내가 정의한 변수들이 있다.
+대표적인 예로 feature_low를 내가 정의했다고 치자.
+이후 yaml헤더가 끝난 템플릿을 작성하는 곳에 {{ import feature_low }}라고 작성했다면, 내가 정의한 변수 feature_low와 feature_low.html과 연결된 것이 아니라 import할 때, feature_low의 확장자가 생략된 것 뿐, 여기까지는 직접 정의한 변수 feature_low와 feature_low.html는 아무 접점이 없다. 하지만, feature_low.html를 import하면서 feature_low.html 내용 안에 page.feature_row라는 것에 쓰인 것.
+이는 page의 사용자 정의 변수(메타 데이터)를 갖고온 것. -->

@@ -97,6 +97,7 @@ ko: &DEFAULT_KO
 Include는 **재사용 가능**한 코드 조각을 저장합니다.  
 즉, 페이지에서 <u>반복 사용</u>되는 **코드 블록**를 다루는 파일입니다.
 
+다음은 <u>_layout</u>파일인 `default.html`에서 <u>_includes</u>에 있는 `head.html`과 `head/custom.html`을 재사용하는 예제입니다.  
 ```html
 <!--_layouts/default.html-->
   <head>
@@ -118,7 +119,8 @@ layout: archive
 ```
 
 ### _sass
-scss파일들은 <u>모듈화된 기능</u>들을 모아둔 것 입니다.
+scss파일들은 <u>모듈화 기능</u>들을 모아둔 **파일**입니다.  
+모든 scss파일들은 `main.scss`에서 import하여 관리합니다! 이는 후술.
 
 #### <span style="font-size: medium;">***minimal-mistakes.scss📜***</span>
 모듈화된 scss파일들을 <u>분류</u>하고 <u>import(불러오는)</u>하는 역활을 합니다.  
@@ -132,10 +134,30 @@ minimal-mistakes에서 제공하는 <u>스킨 설정 시트</u>들입니다.
 
 <hr>
 
-#### <span style="font-size: medium;">***mini.../.scss📜***</span>
-minimal-mistakes에서 제공되는 다양한 기능(기본 글꼴, 검색, 사이드 바 등)의 기본 설정 값을 확인해 볼 수 있습니다.
+#### <span style="font-size: medium;">***제공되는 .scss📜***</span>
+minimal-mistakes에서 제공되는 다양한 기능(기본 글꼴, 검색, 사이드 바 등)의 <u>클래스</u>와 <u>스타일 규칙</u>을 볼 수 있습니다.
 
-대표적으로 `.variables.scss`에서 원하는 글꼴로 바꿀 수 있습니다.  
+`._page.scss`에서는 page에 대한 클래스(.page)와 그 안에 스타일 시트가 있습니다.  
+이는 대다수의 .scss 형식입니다.  
+```scss
+.page {
+  @include breakpoint($large) {
+    float: right;
+    /*float: inline-end;*/
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: 0;
+    /*padding-inline-end: $right-sidebar-width-narrow;*/
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-right: 0;
+    /*padding-inline-end: $right-sidebar-width;*/
+  }
+  ...
+```
+
+`.variables.scss`에서는 원하는 글꼴로 바꿀 수 있습니다.  
 ```scss
 $serif: "Nanum Gothic Coding", Georgia, Times, serif !default;
 $sans-serif: "Gowun Batang", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
@@ -157,8 +179,13 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 #### <span style="font-size: medium;">***images📁***</span>
 이미지를 사용하시려면 images에 파일을 넣어주세요!
 
+#### <span style="font-size: medium;">***css📁***</span>
+css폴더 안에는 `main.scss`가 들어있습니다.  
+main.scss의 역활은 모든 <u>.scss파일</u>들을 **import**하는 곳입니다.  
+`_sass/minimal-mistakes`와 `_sass/minimal-mistakes/skins`를 **import**하고 있습니다.
+
 <div class="notice" style="padding: 0.5em; text-align: center; font-weight: bold;">
-  <span style="font-size: small;">🌠 css와 js 폴더는 수정할 일이 없어서 넘어가겠습니다!</span>
+  <span style="font-size: small;">🌠 scss파일을 추가하여 사용하고 싶으시면 main.scss 또는 main.scss에 import되고 있는 하위 파일들에 추가하시고 사용하시면 됩니다.</span>
 </div>
 
 ## 2. 구성 폴더
