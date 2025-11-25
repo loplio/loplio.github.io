@@ -3,3 +3,31 @@
     // flex-direction: column;
     width: 70%; /* 부모 요소의 너비를 조정 */
     }
+
+.page__hero--overlay {
+    min-height: 550px; /* 원하는 최소 높이로 설정 */
+    // height: 550px; /* 원하는 높이로 설정 */
+    background-size: cover; /* 배경 이미지가 요소를 덮도록 설정 */
+    }
+
+/* 작은 화면에서 사이드바 숨기기 */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0; /* 사이드바가 없으므로 콘텐츠 영역이 전체 화면을 차지하도록 설정 */
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 글씨 크기 조정 */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px; /* 글씨 크기 축소 */
+    }
+  
+    .headline {
+      font-size: 1.5em; /* 헤드라인 크기 조정 */
+    }
+  }

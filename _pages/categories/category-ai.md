@@ -1,13 +1,13 @@
 ---
-title: "데이터베이스" # 카테고리 이름
+title: "인공지능" # 카테고리 이름
 layout: archive
-permalink: categories/database # url
+permalink: categories/ai # url
 author_profile: true
 sidebar:
   nav: "docs"
 ---
 
-{% assign posts = site.categories.DataBase %}
+{% assign posts = site.categories.AI %}
 {% for post in posts %} 
   {% include archive-single.html type=page.entries_layout %} 
 {% endfor %}
